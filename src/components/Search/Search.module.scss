@@ -1,0 +1,37 @@
+.search {
+    border: solid rgba(0, 0, 0, 0.2) 1px;
+    border-radius: 25px;
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: row;
+    width: 248px;
+    transition: all 0.2s ease-in-out;
+}
+
+.search:hover,
+.search:focus-within {
+    border: solid rgba(0, 0, 0, 0.6) 1px;
+    padding: 14px 15px;
+}
+
+.searchIcon {
+    width: 20px;
+    margin-right: 10px;
+    opacity: 0.2;
+}
+
+.input {
+    border: none;
+    opacity: 0.7;
+    margin-right: 10px;
+}
+
+.closeIcon {
+    width: 20px;
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.closeIcon:hover {
+    opacity: 0.6;
+}

@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import './scss/App.scss';
+
+import React from 'react';
+import { Routes, Route, useParams, useSearchParams } from 'react-router-dom';
+
+
+
+import Header from './components/Header';
+import MainPage from './pages/MainPage';
+import NotFoundPage from './pages/NotFoundPage';
+import CartPage from './pages/CartPage';
+import SearchPage from './pages/SearchPage';
+
+
 
 function App() {
+
+  // const [searchValue, setSearchValue] = React.useState('')
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Header />
+      <div className="content">
+
+        <Routes>
+          <Route path='/' element={<MainPage />} />
+          <Route path='/cart' element={<CartPage />} />
+          <Route path='/search' element={<SearchPage />} />
+          <Route path='*' element={<NotFoundPage />} />
+        </Routes>
+
+      </div>
     </div>
   );
 }
 
 export default App;
+
